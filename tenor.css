@@ -35,11 +35,11 @@ body {
   pointer-events: all!important;
 }
 .carousel-item .active{
-  width: 75% !important;
-  height: 75% !important;
+  width: 85% !important;
+  height: 85% !important;
 }
 
-@media only screen and (max-width: 490px){
+@media only screen and (max-width: 600px){
   .carousel-item .active{
     width: 100% !important;
     height: 100% !important;
