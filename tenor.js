@@ -18,34 +18,35 @@ data-mdb-slide="next"
 <span class="visually-hidden">Next</span>
 </button>`;
 let defaultKeywords = ["fun", "joy", "happines", "curious", "kitten"];
+let keywords = "";
 $(document).ready(function () {
   setbackground();
   $("#searchIcon").click(function () {
-    console.log($("#form1").val());
-    let keywords = $("#form1").val();
-    getData(keywords);
+    getData();
   });
 });
 
-async function getData(keywords) {
+async function getData() {
+    keywords = $("#form1").val();
+
   $(".carousel-inner").html("");
   let url = `https://tenor.googleapis.com/v2/search?q=${keywords}&key=${myKey}`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data)
-  let html,description;
+  console.log(data);
+  let html, description;
   for (let i = 0; i < data.results.length; i++) {
     description = data.results[i].content_description;
     html = `<div class="carousel-item`;
     if (i == 0) {
-        html += ` active`;
+      html += ` active`;
     }
     html += `"><img src="${data.results[i].media_formats.gif.url}" class="d-block w-100" /> <div class="carousel-caption d-none d-md-block"> <h5>${description}</h5></div> </div>`;
     // let html = `<img src="${data.results[i].media_formats.gif.url}"/>`
 
     $(".carousel-inner").append(html);
-}
-$(".carousel-inner").append(carouselNav);
+  }
+  $(".carousel-inner").append(carouselNav);
 
   $("html, body").animate({ scrollTop: $(document).height() }, "slow");
 }
@@ -59,7 +60,7 @@ async function setbackground() {
   const data = await response.json();
   n2 = Math.floor(Math.random() * data.results.length);
   let heroImageBg = data.results[n2].media_formats.gif.url;
-  
+
   $(".hero-image").css({
     "background-image": `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImageBg})`,
   });
