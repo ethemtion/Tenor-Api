@@ -41,7 +41,7 @@ async function getData() {
     if (i == 0) {
       html += ` active`;
     }
-    html += `"><img src="${data.results[i].media_formats.gif.url}" class="d-block w-100 h-100" /> <div class="carousel-caption d-none d-md-block"> <h5>${description}</h5></div> </div>`;
+    html += `"><img src="${data.results[i].media_formats.tinygif.url}" class="d-block w-100 h-100" /> <div class="carousel-caption d-none d-md-block"> <h5>${description}</h5></div> </div>`;
     // let html = `<img src="${data.results[i].media_formats.gif.url}"/>`
 
     $(".carousel-inner").append(html);
