@@ -34,8 +34,18 @@ body {
 #searchIcon{
   pointer-events: all!important;
 }
+.carousel-item .active{
+  width: 75% !important;
+  height: 75% !important;
+}
 
-.carosel-inner{
-  max-width: 400px !important;
-  max-height: 400px !important;
+@media only screen and (max-width: 490px){
+  .carousel-item .active{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .hero-image{
+    height: 50vw;
+  }
 }

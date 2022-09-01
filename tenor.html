@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TENOR GIF API</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="tenor.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md align-content-center text-center m-lg-5">
+        <div class="hero-image img-fluid">
+          <div class="hero-text">
+            <h2>TENOR GIF API</h2>
+            <p>Usage test of API</p>
+          </div>
+        </div>
+
+        <div class="form-outline mt-2">
+          <!-- <i class="fas fa-search trailing" id="searchIcon"><a href="#"></a></i> -->
+          <form action="javascript:getData()">  
+            <a id="searchIconButton"
+              ><i class="fas fa-search trailing" id="searchIcon"></i
+            ></a>
+            <input
+              type="text"
+              id="form1"
+              class="form-control form-icon-trailing"
+              placeholder="Search for gifs"
+            />
+            <!-- <label class="form-label" for="form1">Search for gifs</label> -->
+          </form>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-3"></div>
+      <div
+        class="col-sm-6  align-content-center text-center mt-2"
+        id="gifsBody"
+      >
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-mdb-ride="carousel"
+        >
+          <div class="carousel-inner image-fluid" ></div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br>
+    <br>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+      integrity="sha512-jgqnY5wi2gxl4Yj4iXEEpVWrBI6JeJQc67LVC/a65X/TeMotFC0veqlMqYHAI3FfS3hCdx5z6fqKFzXqdnKXDw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      integrity="sha512-vh3qZydgHrPxdxwRhcgtoovKGWVolDZmOW9s4qDyPYnlqqPm5uzOoVj4Rq4I7bxfhuNFhgKZXp4LUIJDbCvmIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link rel="stylesheet" href="tenor.css" />
+  </body>
+</html>
