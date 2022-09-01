@@ -34,16 +34,16 @@ body {
 #searchIcon{
   pointer-events: all!important;
 }
-.carousel-item .active{
+/* .carousel-item .active{
   width: 85% !important;
   height: 85% !important;
-}
+} */
 
 @media only screen and (max-width: 600px){
-  .carousel-item .active{
+  /* .carousel-item .active{
     width: 100% !important;
     height: 100% !important;
-  }
+  } */
 
   .hero-image{
     height: 50vw;
