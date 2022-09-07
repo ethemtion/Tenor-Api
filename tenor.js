@@ -1,4 +1,4 @@
-const myKey = "AIzaSyB9GJDrLt3rV_qCrq42Ryr9VXn7xME13aM";
+const myKey = "";
 const carouselNav = `<button
 class="carousel-control-prev"
 type="button"
