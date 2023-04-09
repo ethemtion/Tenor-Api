@@ -57,7 +57,7 @@ async function setbackground() {
   let n = Math.floor(Math.random() * defaultKeywords.length);
   let n2;
   let keyword = defaultKeywords[n];
-  let url = `https://tenor.googleapis.com/v2/search?q=${keyword}&key=${myKey}`;
+  let url = `https://tenor.googleapis.com/v2/search?q=${keyword}&key=${process.env.TENOR_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
   n2 = Math.floor(Math.random() * data.results.length);
