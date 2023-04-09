@@ -21,7 +21,7 @@ data-mdb-slide="next"
 let defaultKeywords = ["fun", "joy", "happines", "curious", "kitten"];
 let keywords = "";
 $(document).ready(function () {
-  const process = require('dotenv').config();
+  
   setbackground();
   $("#searchIcon").click(function () {
     getData();
