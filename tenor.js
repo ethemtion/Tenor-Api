@@ -1,3 +1,4 @@
+
 const myKey = "";
 const carouselNav = `<button
 class="carousel-control-prev"
@@ -20,6 +21,7 @@ data-mdb-slide="next"
 let defaultKeywords = ["fun", "joy", "happines", "curious", "kitten"];
 let keywords = "";
 $(document).ready(function () {
+  const process = require('dotenv').config();
   setbackground();
   $("#searchIcon").click(function () {
     getData();
@@ -30,7 +32,7 @@ async function getData() {
     keywords = $("#form1").val();
 
   $(".carousel-inner").html("");
-  let url = `https://tenor.googleapis.com/v2/search?q=${keywords}&key=${myKey}`;
+  let url = `https://tenor.googleapis.com/v2/search?q=${keywords}&key=${process.env.TENOR_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
